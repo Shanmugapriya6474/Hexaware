@@ -7,7 +7,7 @@ class DatabaseConnector:
         try:
             connection = pyodbc.connect(
                 'DRIVER={ODBC Driver 17 for SQL Server};'
-                'SERVER=LAPTOP-SHAN\\Shanmugapriya;'  # Use your SQL Server name
+                'SERVER=LAPTOP-SHAN;'  # Use your SQL Server name
                 'DATABASE=TechShop3;'
                 'Trusted_Connection=yes;'
             )
