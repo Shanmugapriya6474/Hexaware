@@ -6,7 +6,7 @@ from exception.patientnumbernotfoundexception import PatientNumberNotFoundExcept
 def main():
     service = HospitalServiceImpl()
 
-    while True:  # 🔁 Outer loop to allow re-login
+    while True:  # Outer loop to allow re-login
         print("\n---- Hospital Management System Login ----")
         print("1. Admin Login")
         print("2. Doctor Login")
@@ -24,7 +24,7 @@ def main():
             if username == "admin" and password == "admin123":
                 is_admin = True
             else:
-                print("❌ Invalid admin credentials.")
+                print("Invalid admin credentials.")
                 continue
 
         elif login_type == '2':
@@ -33,7 +33,7 @@ def main():
             if username == "doctor" and password == "doc123":
                 is_doctor = True
             else:
-                print("❌ Invalid doctor credentials.")
+                print("Invalid doctor credentials.")
                 continue
 
         elif login_type == '3':
@@ -42,18 +42,18 @@ def main():
             if username == "patient" and password == "pat123":
                 is_patient = True
             else:
-                print("❌ Invalid patient credentials.")
+                print(" Invalid patient credentials.")
                 continue
 
         elif login_type == '4':
-            print("✅ Exiting the system. Goodbye!")
+            print("Exiting the system. Goodbye!")
             break
 
         else:
-            print("❌ Invalid login type.")
+            print("Invalid login type.")
             continue
 
-        # 🔁 Inner loop: operations after login
+        #  Inner loop: operations after login
         while True:
             print("\n---- Hospital Management System ----")
             if is_admin:
@@ -116,7 +116,7 @@ def main():
                     service.cancel_appointment(aid)
 
                 elif choice == '7':
-                    print("🔁 Logging out...")
+                    print("Logging out...")
                     break  # exits inner loop, returns to login menu
 
                 else:
